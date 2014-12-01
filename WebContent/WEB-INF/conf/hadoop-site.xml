@@ -1,0 +1,32 @@
+<configuration> 
+<property> 
+  <name>dfs.data.dir</name> 
+  <value>/home/atg/data/hadoop/dfs/data</value> 
+  <description>Determines where on the local filesystem an DFS data node 
+  should store its blocks.  If this is a comma-delimited 
+  list of directories, then data will be stored in all named 
+  directories, typically on different devices.</description> 
+</property> 
+<property> 
+  <name>mapred.local.dir</name> 
+  <value>/home/atg/data/hadoop/mapred/local</value> 
+  <description>The local directory where MapReduce stores intermediate 
+  data files.  May be a comma-separated list of 
+  directories on different devices in order to spread disk i/o. 
+  </description> 
+</property> 
+
+<property> 
+  <name>mapred.system.dir</name> 
+  <value>/home/atg/data/hadoop/mapred/system</value> 
+  <description>The shared directory where MapReduce stores control files. 
+  </description> 
+</property> 
+
+<property> 
+  <name>mapred.temp.dir</name> 
+  <value>/home/atg/data/hadoop/mapred/temp</value> 
+  <description>A shared directory for temporary files. 
+  </description> 
+</property> 
+</configuration> 

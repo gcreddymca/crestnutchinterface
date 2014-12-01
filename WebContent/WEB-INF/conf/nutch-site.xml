@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+<property>
+<name>http.agent.name</name>
+<value>nviz agent</value>
+</property>
+
+<property>
+<name>http.verbose</name>
+<value>false</value>
+<description>If true, HTTP will log more verbosely.</description>
+</property>
+
+<property>
+<name>fetcher.verbose</name>
+<value>false</value>
+<description>If true, fetcher will log more verbosely.</description>
+</property>
+
+<property>
+<name>plugin.includes</name>
+<value>protocol-http|urlfilter-regex|urlnormalizer-regex|parse-html</value>
+</property>
+
+<property>
+<name>urlfilter.regex.file</name>
+<value>regex-urlfilter.txt</value>
+</property>
+
+<property>
+<name>urlfilter.regex.file.template</name>
+<value>regex-urlfilter.txt.template</value>
+</property>
+
+<property>
+<name>http.robots.agents</name>
+<value>nviz agent,*</value>
+</property>
+
+<property>
+<name>parser.html.outlinks.ignore_tags</name>
+<value>img,script,link</value>
+</property>
+
+<property>
+  <name>generate.save.urls.in.segments</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>inject.pick.seed.urls.in.domain</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>generate.default.segment.name</name>
+  <value>DEFAULT</value>
+</property>
+
+<property>
+  <name>generate.default.segment.crawl</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>url.exclude.request.parameters</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>url.request.parameter.exclusion.list</name>
+  <value>error,_dynSessConf,jsessionid,_D,_DARGS,/atg/store/profile/SessionBean.values.loginSuccessURL,categoryNavIds,categoryNav,navAction,loginFromHeader,navCount,resetFormErrors,selectedSize,selectedColor</value>
+</property>
+
+<property>
+  <name>url.exclude.bookmarks</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>dbConfig.dataSource</name>
+  <value>jdbc:oracle:thin:@localhost:1521:XE</value>
+</property>
+
+<property>
+  <name>dbConfig.user</name>
+  <value>HYPERSCALE</value>
+</property>
+
+<property>
+  <name>dbConfig.password</name>
+  <value>HYPERSCALE</value>
+</property>
+
+<property>
+  <name>inject.read.seed.urls.from.db</name>
+  <value>HYPERSCALE</value>
+</property>
+
+<property>
+  <name>seed.urls.file</name>
+  <value>urls.txt</value>
+</property>
+
+<property>
+  <name>file.content.limit</name>
+  <value>-1</value>
+</property>
+
+<property>
+<name>db.max.outlinks.per.page</name>
+<value>-1</value>
+</property>
+
+<property>
+  <name>http.content.limit</name>
+  <value>-1</value>
+</property>
+
+
+<property>
+  <name>fetcher.threads.fetch</name>
+  <value>40</value>
+</property>
+
+<property>
+  <name>fetcher.threads.per.queue</name>
+  <value>30</value>
+</property>
+
+<property>
+  <name>http.timeout</name>
+  <value>200000</value>
+  <description>The default network timeout, in milliseconds.</description>
+</property>
+
+<property>
+  <name>fetcher.server.delay</name>
+  <value>0.2</value>
+</property>
+
+<property>
+  <name>fetcher.server.min.delay</name>
+  <value>0.1</value>
+</property>
+
+<property>
+    <name>plugin.folders</name>
+    <value>E:/Plantronics/Development/SETUP/jboss-eap-6.1/standalone/deployments/hm.war/WEB-INF/plugins</value>
+</property>
+
+<property>
+        <name>crawlDirectory</name>
+        <value>E:/Plantronics/Development/testG</value>
+     </property>
+     <property>
+       	<name>crawlTempDirectory</name>
+       	<value>E:/Plantronics/Development/crawlTemp</value>
+     </property>
+     <property>
+     	<name>raw_content_temp_dir</name>
+     	<value>E:/Plantronics/Development/rawTemp</value>
+     </property>
+     <property>
+     	<name>final_content_temp_dir</name>
+     	<value>E:/Plantronics/Development/finalTemp</value>
+     </property>
+<property>
+	<name>protocol.plugin.check.robots</name>
+	<value>false</value>
+</property>
+<property>
+        <name>Protocol.CHECK_ROBOTS</name>
+        <value>false</value>
+</property>
+<property>
+	<name>hostName</name>
+	<value>http://qa.plantronics.com</value>
+ </property>
+</configuration>

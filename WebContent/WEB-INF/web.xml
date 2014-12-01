@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+	<display-name>hm</display-name>
+  
+	<welcome-file-list>
+		<welcome-file>homepage.jsp</welcome-file>
+	</welcome-file-list>
+  
+	<servlet>
+		<description></description>
+		<display-name>ProcessFormOperation</display-name>
+		<servlet-name>ProcessFormOperation</servlet-name>
+		<servlet-class>com.hm.servlet.ProcessFormOperationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProcessFormOperation</servlet-name>
+		<url-pattern>/processForm</url-pattern>
+	</servlet-mapping>
+  
+	<servlet>
+		<description></description>
+		<display-name>ProcessAddSegment</display-name>
+		<servlet-name>ProcessAddSegment</servlet-name>
+		<servlet-class>com.hm.servlet.ProcessAddSegmentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProcessAddSegment</servlet-name>
+		<url-pattern>/processAddSegment</url-pattern>
+	</servlet-mapping>
+  
+	<servlet>
+		<description></description>
+		<display-name>ProcessAddDomain</display-name>
+		<servlet-name>ProcessAddDomain</servlet-name>
+		<servlet-class>com.hm.servlet.ProcessAddDomainServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProcessAddDomain</servlet-name>
+		<url-pattern>/processAddDomain</url-pattern>
+	</servlet-mapping>
+  
+	<servlet>
+		<description></description>
+		<display-name>LoginAuthenticate</display-name>
+		<servlet-name>LoginAuthenticate</servlet-name>
+		<servlet-class>com.hm.servlet.LoginAuthenticateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginAuthenticate</servlet-name>
+		<url-pattern>/loginAuthenticate</url-pattern>
+	</servlet-mapping>
+  
+	<servlet>
+		<servlet-name>DomainServlet</servlet-name>
+		<servlet-class>com.hm.servlet.DomainServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DomainServlet</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+  
+	<servlet>
+		<servlet-name>IndexPageServlet</servlet-name>
+		<servlet-class>com.hm.servlet.IndexPageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>IndexPageServlet</servlet-name>
+		<url-pattern>/segment</url-pattern>
+	</servlet-mapping>
+  
+	<servlet>
+		<description></description>
+		<display-name>URLDetailServlet</display-name>
+		<servlet-name>URLDetailServlet</servlet-name>
+		<servlet-class>com.hm.servlet.URLDetailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>URLDetailServlet</servlet-name>
+		<url-pattern>/segmentURLDetail</url-pattern>
+	</servlet-mapping>
+  
+	<servlet>
+		<description></description>
+		<display-name>ProcessMergeSegmentServlet</display-name>
+		<servlet-name>ProcessMergeSegmentServlet</servlet-name>
+		<servlet-class>com.hm.servlet.ProcessMergeSegmentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProcessMergeSegmentServlet</servlet-name>
+		<url-pattern>/processMergeSegment</url-pattern>
+	</servlet-mapping>
+  
+	<servlet>
+		<description></description>
+		<display-name>ProcessSplitSegmentServlet</display-name>
+		<servlet-name>ProcessSplitSegmentServlet</servlet-name>
+		<servlet-class>com.hm.servlet.ProcessSplitSegmentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProcessSplitSegmentServlet</servlet-name>
+		<url-pattern>/processSplitSegment</url-pattern>
+	</servlet-mapping>
+  
+	<servlet>
+		<description></description>
+		<display-name>PurgeServlet</display-name>
+		<servlet-name>PurgeServlet</servlet-name>
+		<servlet-class>com.hm.purge.PurgeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PurgeServlet</servlet-name>
+		<url-pattern>/PurgeServlet</url-pattern>
+	</servlet-mapping>
+  
+	<servlet>
+		<description></description>
+		<display-name>FolderMonitorServlet</display-name>
+		<servlet-name>FolderMonitorServlet</servlet-name>
+		<servlet-class>com.hm.file.monitor.FolderMonitorServlet</servlet-class>
+		<!--<load-on-startup>1</load-on-startup>-->
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FolderMonitorServlet</servlet-name>
+		<url-pattern>/monitorServlet</url-pattern>
+	</servlet-mapping>
+  
+	<context-param>
+	    <param-name>resteasy.scan</param-name>
+	    <param-value>false</param-value>
+	</context-param>
+	<context-param>
+	    <param-name>resteasy.scan.providers</param-name>
+	    <param-value>false</param-value>
+	</context-param>
+	<context-param>
+	    <param-name>resteasy.scan.resources</param-name>
+	    <param-value>false</param-value>
+	</context-param>
+</web-app>
