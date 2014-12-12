@@ -6,7 +6,7 @@
 	<copy todir="build/classes" verbose="true">
       <fileset dir="WebContent/WEB-INF/conf"/>
     </copy>
-   <war destfile="hm-env.BUILD_NUMBER.war" webxml="WebContent/WEB-INF/web.xml">
+   <war destfile="hm-$env.BUILD_NUMBER.war" webxml="WebContent/WEB-INF/web.xml">
    <fileset dir="WebContent">
       <include name="**/*.*"/>
    </fileset>
