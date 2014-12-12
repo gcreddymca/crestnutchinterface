@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<project name="CREST">
+<property environment="env"/>
+<property name="label" value="${env.JOB_NAME}-${env.BUILD_NUMBER}"/>
+<target name="build-war">
+	<copy todir="build/classes" verbose="true">
+      <fileset dir="WebContent/WEB-INF/conf"/>
+    </copy>
+   <war destfile="hm-env.BUILD_NUMBER.war" webxml="WebContent/WEB-INF/web.xml">
+   <fileset dir="WebContent">
+      <include name="**/*.*"/>
+   </fileset>
+  
+   <classes dir="build/classes"/>
+</war>
+</target>
+</project>
